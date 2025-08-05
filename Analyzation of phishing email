@@ -1,0 +1,126 @@
+STEP-1 .Examine sender's email address for spoofing.
+From: Microsoft Account Team <security-alert@m1crosoft-support.com>
+1.Lookalike Domain
+  m1crosoft-support.com
+  This is not a legitimate Microsoft domain.
+  Uses “1” instead of “i” – a trick called typosquatting.
+
+2.Mismatch with Brand
+ Official Microsoft emails typically come from:
+ @microsoft.com
+ @account.microsoft.com
+ This fake domain tries to look similar to gain your trust.
+
+
+STEP-2 Check Email Headers
+EMAIL HEADER  - Return-Path: <reply@fake-ms-login.ru>
+                Received: from unknownhost.ru (185.221.123.45) by mail.fakeprovider.com
+                with SMTP id 123ABC456DEF; Mon, 04 Aug 2025 08:22:47 +0530
+               Authentication-Results: mx.google.com;
+                 spf=fail (google.com: domain of fake-ms-login.ru does not designate 185.221.123.45 as permitted sender) smtp.mailfrom=fake-ms-login.ru;
+                 dkim=fail header.d=fake-ms-login.ru;
+                 dmarc=fail (p=REJECT sp=REJECT dis=NONE) header.from=m1crosoft-support.com
+              From: Microsoft Account Team <security-alert@m1crosoft-support.com>
+              To: you@example.com
+              Subject: Immediate Action Required: Account Suspended
+              Date: Mon, 04 Aug 2025 08:22:47 +0530
+              Message-ID: <20250804025247.fake@unknownhost.ru>
+              MIME-Version: 1.0
+              Content-Type: text/html; charset=UTF-8
+ANALYZING THE HEADER
+Header Field	What It Tells You
+Return-Path:	Not from Microsoft – it’s from fake-ms-login.ru
+Received:   	Came from unknownhost.ru (185.221.x.x IP), not Microsoft servers
+spf=fail	    SPF check failed – sender is not authorized to use the domain
+dkim=fail	    DKIM failed – the digital signature is invalid
+dmarc=fail	  DMARC failed – fails both SPF & DKIM, domain not enforcing protection
+From:	        Appears as Microsoft, but actually m1crosoft-support.com (a spoofed domain)
+
+
+STEP-3  Identify Suspicious Links or Attachments
+Please click the link below to verify your identity:
+ [Verify Now](http://m1crosoft-verification-center.net/login)
+ANALYZING THE LINK:
+This is not a real Microsoft domain. It’s a lookalike using:
+m1crosoft with a number 1 instead of an i
+A non-secure HTTP link
+A phishing domain designed to collect login info
+
+ANALYZING THE ATTACHMENT
+Attachment: verify_account.html
+.html files in phishing emails usually:
+Open a fake login page
+Send your credentials to an attacker
+NEVER open this kind of file from unknown sources.
+
+STEP-4 Look for Urgent or Threatening Language
+from the Malicious Email:
+"We've noticed suspicious login attempts on your Microsoft account. For your security, we have temporarily suspended access."
+"If we do not receive verification within 24 hours, your account will be permanently locked."
+
+        Clue	                      Why It’s Suspicious
+->Urgency / Short Deadline	    “Within 24 hours” forces you to act without thinking
+->Account Threat	              “Temporarily suspended” → triggers fear
+->Fear of Permanent Loss	      “Will be permanently locked” is a scare tactic
+->Emotionally Pressuring	      Mix of fear + urgency = classic phishing strategy
+
+ Legit Companies Typically:
+*Never threaten you with immediate suspension
+*Allow flexible timeframes
+*Use calm, neutral language
+*Personalize their messages (not “Dear User”)
+
+
+STEP-5 Check for Mismatched URLs
+From the Malicious Email:
+[Verify Now](http://m1crosoft-verification-center.net/login)
+
+       Check	                       Suspicious?
+Visible Text	                “Verify Now” — looks generic ✅
+Actual Link (hover)	          http://m1crosoft-verification-center.net/login ❌
+Mismatch with Brand	          Domain should be microsoft.com ❌
+Misspelling / Typo            Domain	m1crosoft uses number "1" instead of "i" ❌
+Insecure Protocol            	Link uses http:// (not https://) ❌
+
+
+STEP-6 Check for Spelling or Grammar Errors
+Generic greeting	        “Dear User” → No personalization ❌
+Unnatural phrasing	      “We have temporarily suspended access” sounds vague ❌
+Tone inconsistency	      Mix of formal tone and aggressive warning ❌
+
+
+STEP-7 Summarize Phishing Traits Found
+  Summary of Phishing Indicators
+#	Trait	Description
+1️⃣	Spoofed Sender	Email from m1crosoft-support.com, a lookalike domain with typo
+2️⃣	Header Failures	SPF, DKIM, and DMARC checks all failed
+3️⃣	Malicious Link	Hidden link points to a fake login site (m1crosoft-verification-center.net)
+4️⃣	Urgent Language	Phrases like “verify within 24 hours” create pressure
+5️⃣	Mismatched URL	Link display text differs from actual domain (misleading)
+6️⃣	Generic Greeting	“Dear User” instead of your name
+7️⃣	Suspicious Attachment	.html file likely used for credential theft
+8️⃣	No Personalization or Branding	Language is vague, unprofessional
+9️⃣	New/Unknown Domain	Domain has little or no WHOIS/reputation data
+
+🚨 Final Verdict:
+This email exhibits multiple strong phishing indicators and should be reported or deleted immediately. Do not click any links or download attachments.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
