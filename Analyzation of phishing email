@@ -12,6 +12,7 @@ From: Microsoft Account Team <security-alert@m1crosoft-support.com>
  This fake domain tries to look similar to gain your trust.
 
 
+
 STEP-2 Check Email Headers
 EMAIL HEADER  - Return-Path: <reply@fake-ms-login.ru>
                 Received: from unknownhost.ru (185.221.123.45) by mail.fakeprovider.com
@@ -37,6 +38,7 @@ dmarc=fail	  DMARC failed – fails both SPF & DKIM, domain not enforcing protec
 From:	        Appears as Microsoft, but actually m1crosoft-support.com (a spoofed domain)
 
 
+
 STEP-3  Identify Suspicious Links or Attachments
 Please click the link below to verify your identity:
  [Verify Now](http://m1crosoft-verification-center.net/login)
@@ -52,6 +54,8 @@ Attachment: verify_account.html
 Open a fake login page
 Send your credentials to an attacker
 NEVER open this kind of file from unknown sources.
+
+
 
 STEP-4 Look for Urgent or Threatening Language
 from the Malicious Email:
@@ -71,6 +75,7 @@ from the Malicious Email:
 *Personalize their messages (not “Dear User”)
 
 
+
 STEP-5 Check for Mismatched URLs
 From the Malicious Email:
 [Verify Now](http://m1crosoft-verification-center.net/login)
@@ -83,10 +88,12 @@ Misspelling / Typo            Domain	m1crosoft uses number "1" instead of "i" �
 Insecure Protocol            	Link uses http:// (not https://) ❌
 
 
+
 STEP-6 Check for Spelling or Grammar Errors
 Generic greeting	        “Dear User” → No personalization ❌
 Unnatural phrasing	      “We have temporarily suspended access” sounds vague ❌
 Tone inconsistency	      Mix of formal tone and aggressive warning ❌
+
 
 
 STEP-7 Summarize Phishing Traits Found
